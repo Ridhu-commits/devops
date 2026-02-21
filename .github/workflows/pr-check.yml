@@ -1,0 +1,20 @@
+name: PR Demo Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pr-demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print message
+        run: echo "Pull Request triggered successfully!"
+
+      - name: List files
+        run: ls -la
